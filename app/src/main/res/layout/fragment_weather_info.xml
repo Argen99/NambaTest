@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/material_dynamic_secondary10"
+    tools:context=".ui.fragment.weather.weather_info.WeatherInfoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_temp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:textColor="@color/white_2"
+            android:textSize="80sp"
+            tools:text="30°ᶜ" />
+
+        <TextView
+            android:id="@+id/tv_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/white_2"
+            android:textSize="24sp"
+            tools:text="Переменная облачность" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/white_2"
+            tools:text="14 july" />
+
+        <include
+            android:id="@+id/include_wind"
+            layout="@layout/weather_data" />
+
+        <include
+            android:id="@+id/include_humidity"
+            layout="@layout/weather_data" />
+
+        <TextView
+            android:id="@+id/tv_five_day_forecast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="12dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:padding="4dp"
+            android:text="Прогноз на 5 дней"
+            android:textColor="@color/white_2"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

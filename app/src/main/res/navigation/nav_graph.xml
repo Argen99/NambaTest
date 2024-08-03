@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/WeatherFragment">
+
+    <fragment
+        android:id="@+id/WeatherFragment"
+        android:name="com.example.nambatest.ui.fragment.weather.WeatherFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_weather">
+
+        <action
+            android:id="@+id/action_WeatherFragment_to_SearchCityFragment"
+            app:destination="@id/SearchCityFragment" />
+        <action
+            android:id="@+id/action_WeatherFragment_to_dailyWeatherForecastFragment"
+            app:destination="@id/dailyWeatherForecastFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SearchCityFragment"
+        android:name="com.example.nambatest.ui.fragment.search_city.SearchCityFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_search_city">
+
+        <action
+            android:id="@+id/action_SearchCityFragment_to_WeatherFragment"
+            app:destination="@id/WeatherFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dailyWeatherForecastFragment"
+        android:name="com.example.nambatest.ui.fragment.five_day_forecast.DailyWeatherForecastFragment"
+        android:label="fragment_five_day_forecast"
+        tools:layout="@layout/fragment_daily_weather_forecast" >
+        <argument
+            android:name="coord"
+            app:argType="com.example.data.model.Coordinates" />
+        <argument
+            android:name="cityName"
+            app:argType="string" />
+    </fragment>
+</navigation>
