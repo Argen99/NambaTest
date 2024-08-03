@@ -45,7 +45,7 @@ class DailyWeatherForecastFragment :
         viewModel.forecastState.spectateUiState(
             progressBar = binding.progressBar,
             success = {
-                forecastAdapter.submitList(it.dropLast(2))
+                forecastAdapter.submitList(it.dropLast(3))
             },
             error = {
                 showToast(it, Toast.LENGTH_LONG)
